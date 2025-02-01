@@ -27,8 +27,7 @@ export async function POST(request: Request) {
     const response = await openai.chat.completions.create({
       model: chatSettings.model as ChatCompletionCreateParamsBase["model"],
       messages: messages as ChatCompletionCreateParamsBase["messages"],
-      ...((chatSettings.model !== "o3-mini" &&
-        chatSettings.model !== "o1") && {
+      ...((chatSettings.model !== "o3-mini") && {
         temperature: chatSettings.temperature,
         max_tokens:
           chatSettings.model === "gpt-4-vision-preview" ||

@@ -33,20 +33,6 @@ const O3Mini: LLM = {
   }
 }
 
-const O1: LLM = {
-  modelId: "o1",
-  modelName: "o1",
-  provider: "openai",
-  hostedId: "o1",
-  platformLink: OPENAI_PLATORM_LINK,
-  imageInput: false,
-  pricing: {
-    currency: "USD",
-    unit: "1M tokens",
-    inputCost: 0.5,
-    outputCost: 1.5
-  }
-}
 const GPT4Turbo: LLM = {
   modelId: "gpt-4-turbo-preview",
   modelName: "GPT-4 Turbo",
@@ -112,7 +98,6 @@ const GPT3_5Turbo: LLM = {
 export const OPENAI_LLM_LIST: LLM[] = [
   GPT4o,
   O3Mini,
-  O1,
   GPT4Turbo,
   GPT4Vision,
   GPT4,
